@@ -2,9 +2,8 @@ package main
 
 // Список
 type List struct {
-	head *Item
-	tail *Item
-	len  int
+	head, tail *Item
+	len        int
 }
 
 // Добавление значения в конец списка
@@ -50,10 +49,9 @@ func (l *List) Last() *Item {
 
 // Элемент списка
 type Item struct {
-	value interface{} // данные узла любого типа
-	prev  *Item       // адрес следующего и предыдущего элемента списка
-	next  *Item       // адрес следующего и предыдущего элемента списка
-	list  *List
+	value      interface{} // данные узла любого типа
+	prev, next *Item       // адрес следующего и предыдущего элемента списка
+	list       *List
 }
 
 // Возвращает следующий Item
